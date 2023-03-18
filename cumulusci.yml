@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.74.0'
+project:
+    name: cUnite_SimpleEvent
+    package:
+        name: Flow Tool Kit: Simple Events
+        api_version: '57'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cUnite_SimpleEvent/tests
+            options:
+                outputdir: robot/cUnite_SimpleEvent/results
+
+    robot_testdoc:
+        options:
+            path: robot/cUnite_SimpleEvent/tests
+            output: robot/cUnite_SimpleEvent/doc/cUnite_SimpleEvent_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
